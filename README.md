@@ -68,7 +68,7 @@ Using the method optionsRaw(string) its possible to add a the options in raw for
                 xAxes: [{
                     gridLines: {
                         display:false
-                    }  
+                    }
                 }]
             }
         }";
@@ -117,6 +117,9 @@ return view('example', compact('chartjs'));
 <div style="width:75%;">
     {!! $chartjs->render() !!}
 </div>
+
+// at bottom of your code
+{!! $chartjs->renderScripts() !!}
 ```
 
 

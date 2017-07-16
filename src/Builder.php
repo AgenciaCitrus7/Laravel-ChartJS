@@ -124,7 +124,7 @@ class Builder
     }
 
     /**
-     * 
+     *
      * @param string $optionsRaw
      * @return \self
      */
@@ -138,6 +138,18 @@ class Builder
      * @return mixed
      */
     public function render()
+    {
+        $chart = $this->charts[$this->name];
+
+        return view('chart-template::chart-template')
+                ->with('element', $this->name)
+                ->with('size', $chart['size']);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function renderScripts()
     {
         $chart = $this->charts[$this->name];
 
