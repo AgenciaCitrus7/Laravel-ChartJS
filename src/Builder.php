@@ -153,7 +153,7 @@ class Builder
     {
         $chart = $this->charts[$this->name];
 
-        return view('chart-template::chart-template')
+        return view('chart-template::chart-scripts')
                 ->with('datasets', $chart['datasets'])
                 ->with('element', $this->name)
                 ->with('labels', $chart['labels'])
